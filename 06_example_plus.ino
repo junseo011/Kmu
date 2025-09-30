@@ -13,11 +13,6 @@ void setup() {
 
 void set_period(int period){ // period: 100 to 10000 (unit: us)
   wait = period/200;
-   if (wait < 1){ 
-    wait = 1;
-  }
-  wait = (int)wait;
-}
 
 void set_duty(int duty){ // duty: 0 to 100 (unit: %)
     int count = 0;
@@ -39,3 +34,4 @@ void loop() {
       fade = -fade;
     }
 }
+
