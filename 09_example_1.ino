@@ -78,7 +78,7 @@ void loop() {
   // Modify the below line to implement the EMA equation
   dist_ema = _EMA_ALPHA*dist_raw + (1-_EMA_ALPHA)*dist_ema;
 
-  float dist_median; // 중위수 필터
+  float dist_median;
   dist_buffer[buffer_index] = dist_raw;
   buffer_index = (buffer_index + 1) % MEDIAN_SIZE;
 
@@ -122,3 +122,4 @@ float USS_measure(int TRIG, int ECHO)
   //        = 100,000 * 0.001 * 0.5 * 346
   //        = 17,300 mm  ==> 17.3m
 }
+
